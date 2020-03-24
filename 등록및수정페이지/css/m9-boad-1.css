@@ -1,0 +1,116 @@
+body{min-width:100%;margin:100px auto;}
+html,body,div,p,ul,li,a{color:#5a5a5a;font-size:16px;font-family:'Noto Sans KR', sans-serif;letter-spacing: -0.04em;}
+.grid-block>[class*="grid-"] {max-width: 1200px;margin:0 auto;}
+.page_width{max-width: 1200px;margin:0 auto;}
+
+.board-wrap{padding:1em;}
+.board-wrap>.board-header{margin-bottom:10px;border-top:2px solid #66747e;border-bottom:1px solid #ddd}
+.board-wrap>.board-header>.title{padding:20px 30px;border-bottom:1px solid #c8c8c8}
+.board-wrap>.board-header>.title>h2{color:#424242;font-weight:400;font-size:18px;line-height:24px;}
+
+/* Board Edit Page Common */
+.board-edit{ width: 100%; padding: 30px; border: 1px solid #CCC; }
+.board-edit li{ padding: 5px 0; }
+.board-edit li:after{ display: block; content: ""; clear: both; }
+.board-edit dl{ position: relative; padding: 5px 0; }
+.board-edit dl .explain_top{ padding-bottom: 6px; color: #006ECC; font-weight: bold; }
+.board-edit dl .explain_bottom{ color: #ED1846; }
+.board-edit dl .explain_right{ display: inline-block; color: #1BDF8F; }
+.board-edit dl:after{ display: block; content: ""; clear: both; }
+.board-edit dl dt{ display: inline-block; float: left; width: 10%; line-height: 35px; }
+.board-edit dl dt.add-explains{ position: absolute; top: calc(50% - 17.5px); }
+.board-edit dl dd{ display: inline-block; float: right; width: 90%; }
+.board-edit dl dd > div > div{
+    position: relative;
+}
+.icon-input {
+    position: absolute;
+    left: 10px;
+    content: "\040";
+    font-family: "axicon";
+    line-height: 35px;
+}
+.board-edit .input-group{ display: inline-block; position: relative; width: 90%; }
+.board-edit label[for^="w_"]{ display: inline-block; float: left; width: 100%; line-height: 35px; }
+.board-edit input[id^="w_"]{ float: left; width: 100%; height: 35px; line-height: 35px; text-indent: 30px; border: 1px solid #DDD;  }
+
+.board-edit input[id^="w_"]::-webkit-input-placeholder { /* Edge */ color: #FFF; }
+.board-edit input[id^="w_"]:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #FFF; }
+.board-edit input[id^="w_"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: #FFF /* Firefox */ }
+
+.board-edit textarea:hover, .board-edit textarea:focus, .board-edit input[id^="w_"]:hover, .board-edit input[id^="w_"]:focus{ border: 1px solid #1DBF8F; transition: all 0.5s ease-in; outline: none; box-shadow: 0 0 5px #1DBF8FB5; }
+.board-edit label[for*="group1_1"]:first-child{ display: inline-block; width: 100%; line-height: 35px; vertical-align: middle; }
+.board-edit .form-group{ display: inline-block; }
+.board-edit .input-group .icon-input:before,
+.board-edit .icon-input:before{ position: absolute; left: 0; content: "\040"; font-family: "axicon"; line-height: 35px; }
+.board-edit .icon-input.w_company:before{ content: "\f0f7"; }
+.board-edit .icon-input.w_address:before{ content: "\f041"; }
+.board-edit .icon-input.w_call:before{ content: "\e917"; }
+.board-edit .icon-input.w_mail:before{ content: "\e002"; }
+.board-edit .icon-input.w_name:before{ content: "\e975"; }
+.board-edit .icon-input.w_subject:before{ content: "\e759"; }
+.board-edit .icon-input.w_pass:before{ content: "\e6d0"; }
+.board-edit .icon-input.w_dummy:before{ content: "D"; }
+.board-edit .icon-input.w_outside_link:before{ content: "\e005"; }
+.board-edit .input-group{ width: 100%; }
+
+.board-edit #w_outside_link{ width: 85%; }
+.board-edit textarea{ width: 100%; min-height: 300px; padding: 10px; border: 1px solid #DDD; resize: none; }
+.board-edit .board-title{ margin: 30px 0 50px 0; text-align: center; font-family: "nanumSquare", "sans-serif"; font-size: 2em; }
+.board-edit input[type="radio"] + label{ margin-right: 15px; font-size: 0.875em; }
+.board-edit .site-import{ float: left; width: 15%; min-width: auto; height: 35px; margin: 0; }
+.section-response{ margin-top: 5px; text-align: right; }
+.section-response .agree-question{ margin-right: 10px; text-align: right; font-size: 0.875em; }
+.section-response .w_agree,
+.section-response label[for^="w_"]{ font-size: 0.875em; }
+.section-response label[for="w_disagree"]{ margin-right: 0; }
+
+/* Start of terms area */
+.term{ margin: 30px 0; }
+.term .section-title{ margin-bottom: 10px; }
+.term .section-title:after{ display: block; content: ""; clear: both; }
+.term .section-title .title{ float: left; }
+.term .section-title .guide-txt{ float: right; position: relative; top: 10px; font-size: 0.75em; color: #666; }
+.term #privacy{ width: 100%; height: 200px; padding: 15px; border: 1px solid #CCC; white-space: pre-line; overflow: auto; font-size: 0.875em; resize: none; }
+.form-buttons{ text-align: center; }
+.button{ min-width: 100px; margin: 0 5px; line-height: 18px; background: #ED1846; color: #FFF; font-weight: bold; cursor: pointer; }
+.button:focus{ outline: none; }
+/* End of terms area */
+.icon-radio{ position: relative; }
+.icon-radio:after{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 1px;
+    content: "\e97e";
+    font-family: "axicon";
+    font-size: 1.3em;
+    color: #BBB;
+}
+input[type="radio"]{ position: relative; z-index: 9999; opacity: 0.01; }
+.require{ position: relative; }
+.require:after { position: absolute; right: 15px; content: "\f05d"; line-height: 35px; color: #ED1846; font-family: "axicon"; }
+input[id$="agree"]:checked + .icon-radio:after,
+input[id^="custom"]:checked + .icon-radio:after{ content: "\e97f"; color: #ED1846; }
+.icon-radio + label{ margin-left: 5px; margin-right: 15px; }
+
+@media screen and (max-width: 439px){
+    .board-edit{ padding: 10px; }
+    .board-edit label[for^="w_"] + .input-group .icon-input, .board-edit label[for^="w_"] + .icon-input{ width: 100%; }
+    .board-edit .board-title{ margin: 30px 0; }
+    .board-edit label[for^="w_"]{ display: none; }
+    .board-edit input[id^="w_"]{ width: 100%; }
+    .board-edit label[for*="group1_1"]:first-child{ width: 100%; margin-bottom: 5px; padding: 10px 0; border-top: 1px solid #DDD; border-bottom: 1px solid #DDD; text-align: center; }
+    .board-edit .input-group{ width: 100%; }
+    .board-edit #w_outside_link{ width: 100%; }
+    .board-edit .site-import{ position: absolute; width: 25%; margin: 0; right: 0; padding: 0; }
+    .term .section-title .guide-txt{ display: none; }
+    .button{ margin: 5px 0; }
+    .board-edit input[id^="w_"]::-webkit-input-placeholder { /* Edge */ color: #999; }
+    .board-edit input[id^="w_"]:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #999; }
+    .board-edit input[id^="w_"]:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #999; }
+    .section-response{ margin-top: 10px; }
+    .agree-question{ margin-right: 2%; }
+    .board-edit dl dt, .board-edit dl dd{ width: 100%; }
+    .board-edit .form-group{ width: 49%; margin-bottom: 5px; }
+}
